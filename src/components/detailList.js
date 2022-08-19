@@ -26,7 +26,7 @@ const DetailList = (props)=>{
     },[]);
 
     return<div>
-        {detailList.length ===0? 'Your Saved Creds Appear Here':detailList.map(detail => <Detail id = {detail._id} deleteHandler = {deleteHandler} key = {detail._id} userID = {detail.userID} name = {detail.name} password = {detail.password} />)}
+        {detailList.length ===0? <h3>Your Saved Creds Appear Here</h3>:detailList.map(detail => <Detail id = {detail._id} deleteHandler = {deleteHandler} key = {detail._id} userID = {detail.userID} name = {detail.name} password = {detail.password} />)}
     </div>
 }
 
