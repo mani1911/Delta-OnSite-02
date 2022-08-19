@@ -1,0 +1,50 @@
+.wrap{
+    margin-top: 10px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1px solid white; 
+    width: 100%;
+    border-bottom: 1px solid rgb(136, 135, 135);
+    padding-bottom: 15px;
+}
+
+.detail{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.name{
+    font-size: 20px;
+    color : rgb(213, 249, 54);
+}
+
+.pass{
+    font-size: 15px;
+    color : rgb(83, 143, 255);
+}
+
+.del{
+    margin-left: auto;
+}
+
+.del:hover{
+    fill: red;
+}
+
+.edit{
+    margin-left: auto;
+    margin-right: 15px;
+}
+
+.edit:hover{
+    fill: rgb(255, 147, 53);
+}
+
+.btn{
+    margin-left: auto;
+}
+span{
+    margin-right: 10px;
+}
