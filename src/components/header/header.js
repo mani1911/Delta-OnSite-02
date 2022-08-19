@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { selectUser } from "./features/userSlice";
+import { selectUser } from "../features/userSlice";
 import classes from './header.module.css';
-import Logout from "./logout";
+import Logout from "../auth/logout";
 const Header = ()=>{
     const user = useSelector(selectUser);
     return <nav className={classes.nav}>

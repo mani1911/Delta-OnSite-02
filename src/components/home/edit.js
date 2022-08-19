@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import axios from 'axios';
-import regcss from './reg.module.css'
+import regcss from '../auth/reg.module.css'
 import {useNavigate} from 'react-router-dom';
-import Modal from './ui/modal';
+import Modal from '../ui/modal';
 import { useLocation } from 'react-router-dom';
 
 
-const Add = ()=>{
+const Edit = ()=>{
     const {state} = useLocation();
 
     const navigate = useNavigate();
@@ -17,7 +17,7 @@ const Add = ()=>{
 
 
 
-    let URL = `http://localhost:3002/detail/new`;
+    let URL = `http://localhost:3002/detail/edit/${state.id}`;
     const submitHandler = async e=>{
         e.preventDefault();
         if(!name || !password){
@@ -26,22 +26,23 @@ const Add = ()=>{
           return;
         }
         else{
-            await axios.post(URL, {name, password, userID : state.userID})
+            await axios.patch(URL, {name, password})
             navigate('/');
         }
 
     }
     return <div className="body">
+    {openModal? <Modal open = {openModal} message = {message} toggleModal = {()=> setOpenModal(false)} /> : null}
     <div className={regcss.background}>
     </div>
     <form onSubmit={submitHandler}>
-        <h3>Add Credential</h3>
+        <h3>Edit Credential</h3>
 
         <label>Title</label>
         <input value ={name} type="text" placeholder="Title" onChange = {e=>setName(e.target.value)}/>
 
         <label>Password</label>
-        <input value ={password} type="text" placeholder="Year of Joining" onChange = {e=>setPassword(e.target.value)}/>
+        <input value ={password} type="text" placeholder="Password" onChange = {e=>setPassword(e.target.value)}/>
 
         <button type = "submit">Save</button>
         <button onClick={()=>{navigate('/')}}>Cancel</button>
@@ -49,4 +50,4 @@ const Add = ()=>{
     </div>
 };
 
-export default Add;
+export default Edit;

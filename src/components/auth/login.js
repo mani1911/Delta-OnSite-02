@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import axios from "axios";
 import {useNavigate} from 'react-router-dom'
 import { useDispatch } from "react-redux";
-import {login} from './features/userSlice';
+import {login} from '../features/userSlice';
 import {Link} from 'react-router-dom';
 import logincss from './login.module.css';
-import Modal from './ui/modal';
+import Modal from '../ui/modal'
 const Login = ()=>{
     let navigate = useNavigate();
     let [username, setUserName] = useState('');

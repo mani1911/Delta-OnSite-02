@@ -1,7 +1,7 @@
 import React, { useEffect ,useState} from "react";
 import axios from 'axios';
 import { useSelector } from "react-redux/es/exports";
-import { selectUser } from "./features/userSlice";
+import { selectUser } from "../features/userSlice";
 import Detail from "./detail";
 
 const DetailList = (props)=>{

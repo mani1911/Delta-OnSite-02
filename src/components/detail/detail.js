@@ -2,7 +2,7 @@ import React from "react";
 import {useNavigate} from 'react-router-dom';
 import classes from './detail.module.css';
 import { useSelector } from "react-redux";
-import { selectUser } from "./features/userSlice";
+import { selectUser } from "../features/userSlice";
 import { BsFillTrashFill } from "react-icons/bs";
 import { BiEditAlt } from "react-icons/bi";
 const Detail = (props)=>{

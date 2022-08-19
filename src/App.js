@@ -1,11 +1,11 @@
 import './App.css';
 import { BrowserRouter, Route ,Routes} from 'react-router-dom';
-import Header from './components/header';
-import Home from './components/home'
-import Login from './components/login';
-import Register from './components/register';
-import Edit from './components/edit';
-import Add from './components/add';
+import Header from './components/header/header';
+import Home from './components/home/home'
+import Login from './components/auth/login';
+import Register from './components/auth/register';
+import Edit from './components/home/edit';
+import Add from './components/home/add';
 function App() {
   return (
     <div className="App">

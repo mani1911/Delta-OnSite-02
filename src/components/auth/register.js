@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from 'axios';
 import regcss from './reg.module.css'
 import {useNavigate, Link} from 'react-router-dom';
-import Modal from "./ui/modal";
+import Modal from "../ui/modal";
 
 
 const Register = ()=>{

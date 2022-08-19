@@ -1,8 +1,6 @@
 
 import Express from "express";
-import bodyParser from "body-parser";
 import mongoose from "mongoose";
-import cookieParser from "cookie-parser";
 import userRoute from "./routes/auth.js";
 import detailRoute from "./routes/credentials.js";
 import cors from 'cors';

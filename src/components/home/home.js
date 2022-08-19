@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from "react";
 import { useSelector } from "react-redux/es/exports";
-import { selectUser } from "./features/userSlice";
+import { selectUser } from "../features/userSlice";
 import home from './home.module.css';
-import DetailList from "./detailList";
+import DetailList from "../detail/detailList";
 import { BiCommentAdd } from "react-icons/bi";
 import { useNavigate } from "react-router-dom";
 
